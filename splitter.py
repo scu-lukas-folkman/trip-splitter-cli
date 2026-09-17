@@ -32,9 +32,9 @@ def share(items, people):
 
     bill = total(items)
 
-    # Rounded down for now, so the group can collect less than the bill.
-    # See TRIP-6, which argues that being short is the worse of the two.
-    return bill // people
+    # Rounded up, so that the group always collects at least the bill.
+    # Somebody gets a couple of cents back, which is the better error.
+    return -(-bill // people)
 
 
 # --- showing money to people -------------------------------------------

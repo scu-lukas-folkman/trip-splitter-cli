@@ -45,6 +45,11 @@ def test_share_refuses_a_trip_with_nobody_on_it():
         splitter.share(TRIP, 0)
 
 
+def test_share_rounds_up_so_the_group_is_never_short():
+    odd = [{"what": "Taxi", "amount": 100}]
+    assert splitter.share(odd, 3) == 34
+
+
 # --- showing money to people -------------------------------------------
 
 
