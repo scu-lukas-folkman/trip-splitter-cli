@@ -2,7 +2,7 @@
 
 Work out who owes what after a trip away. A deliberately small Python module,
 used in **ISYS3001 Module 03** to learn Git, GitHub and the way a team works on
-one codebase at the same time.
+one codebase at the same time. X.
 
 ## Running the tests
 
