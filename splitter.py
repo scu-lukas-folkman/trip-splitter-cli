@@ -13,10 +13,10 @@ An expense is a plain dictionary::
 # --- totals ------------------------------------------------------------
 
 
-def total(items):
+def sum_amounts(items):
     """Return the sum of every expense amount, in cents.
 
-    >>> total([{"what": "Coffee", "amount": 550}])
+    >>> sum_amounts([{"what": "Coffee", "amount": 550}])
     550
     """
     return sum(item["amount"] for item in items)
@@ -30,7 +30,7 @@ def share(items, people):
     if people < 1:
         raise ValueError("a trip needs at least one person")
 
-    bill = total(items)
+    bill = sum_amounts(items)
 
     # Rounded down for now, so the group can collect less than the bill.
     # See TRIP-6, which argues that being short is the worse of the two.

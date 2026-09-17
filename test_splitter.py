@@ -25,12 +25,12 @@ TRIP = [
 # --- totals ------------------------------------------------------------
 
 
-def test_total_adds_up_every_expense():
-    assert splitter.total(TRIP) == 24880
+def test_sum_amounts_adds_up_every_expense():
+    assert splitter.sum_amounts(TRIP) == 24880
 
 
-def test_total_of_an_empty_trip_is_zero():
-    assert splitter.total([]) == 0
+def test_sum_amounts_of_an_empty_trip_is_zero():
+    assert splitter.sum_amounts([]) == 0
 
 
 # --- what each person owes ---------------------------------------------
