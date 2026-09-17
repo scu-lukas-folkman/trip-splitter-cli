@@ -59,9 +59,14 @@ def test_format_money_shows_dollars_and_cents():
 
 
 # --- TRIP-5  the smallest single expense -------------------------------
-#
-# A teammate's tests. Leave this section alone.
-#
+
+
+def test_smallest_finds_the_lowest_amount():
+    assert splitter.smallest(TRIP) == 4250
+
+
+def test_smallest_of_an_empty_trip_is_zero():
+    assert splitter.smallest([]) == 0
 
 
 # --- TRIP-9  a summary line for the whole trip -------------------------

@@ -56,9 +56,20 @@ def format_money(cents):
 
 
 # --- TRIP-5  the smallest single expense -------------------------------
-#
-# A teammate's story. Leave this section alone.
-#
+
+
+def smallest(items):
+    """Return the smallest single expense amount, in cents.
+
+    An empty trip has no smallest expense, so the answer is zero rather than
+    an error -- a trip with nothing on it has cost nobody anything.
+
+    >>> smallest([{"what": "Coffee", "amount": 550}])
+    550
+    """
+    if not items:
+        return 0
+    return min(item["amount"] for item in items)
 
 
 # --- TRIP-9  a summary line for the whole trip -------------------------
